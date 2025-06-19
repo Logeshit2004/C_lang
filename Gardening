@@ -1,0 +1,32 @@
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <assert.h>
+#include <limits.h>
+#include <stdbool.h>
+
+#include <stdio.h>
+
+int main() {
+    int rows, cols, treeNumber;
+    scanf("%d", &rows);
+    scanf("%d", &cols);
+    scanf("%d", &treeNumber);
+
+    int totalTrees = rows * cols;
+
+    if(treeNumber < 1 || treeNumber > totalTrees) {
+        printf("Invalid tree number\n");
+        return 0;
+    }
+
+    int col = (treeNumber - 1) / rows + 1;
+    if (col == 2 || col == cols - 1) {
+        printf("It is a mango tree\n");
+    } else {
+        printf("It is not a mango tree\n");
+    }
+
+    return 0;
+}
