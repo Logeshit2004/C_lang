@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main() {
+    int wl, wb; 
+    int p1l, p1b; 
+    int p2l, p2b; 
+    scanf("%d %d", &wl, &wb);
+    scanf("%d %d", &p1l, &p1b);
+    scanf("%d %d", &p2l, &p2b);
+    int horizontal_fit = (p1l + p2l <= wl) && (p1b <= wb) && (p2b <= wb);
+    int vertical_fit = (p1b + p2b <= wb) && (p1l <= wl) && (p2l <= wl);
+    if (horizontal_fit || vertical_fit) {
+        printf("Raj can fix both painting\n");
+    } else {
+        printf("Raj cannot fix both painting\n");
+    }
+
+    return 0;
+}
