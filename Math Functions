@@ -1,0 +1,30 @@
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <assert.h>
+#include <limits.h>
+#include <stdbool.h>
+
+int main() {
+    
+    float floatValue;
+    int squareInput, base, power;
+
+    scanf("%f", &floatValue);
+    scanf("%d", &squareInput);
+    scanf("%d", &base);
+    scanf("%d", &power);
+
+    int floorValue = (int)floor(floatValue);
+    int ceilValue = (int)ceil(floatValue);
+    int sqrtValue = (int)sqrt(squareInput);
+    int powValue = (int)pow(base, power);
+
+    printf("%d\n", floorValue);
+    printf("%d\n", ceilValue);
+    printf("%d\n", sqrtValue);
+    printf("%d\n", powValue);
+
+    return 0;
+}
